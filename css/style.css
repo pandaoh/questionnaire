@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: snow;
+}
+
+header{
+  width: 1000px;
+  margin: 5px auto;
+  text-align: left;
+}
+
+header h2{
+  color: black;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.complete{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1000px;
+  background: #C0C0C0;
+  margin: 5px auto 15px;
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px #A9A9A9;
+}
+
+button{
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  padding: 5px;
+  height: 40px;
+  color: white;
+  background: #999;
+  border: 1px solid #666;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+button:hover{
+  transition-duration: 0.5s;
+  color: #333;
+  background: whitesmoke;
+}
+button:active {
+  box-shadow: 0 3px 3px #555;
+  transform: scale3d(0.9,0.9,0.9);
+}
+
+img{
+  padding: 1px;
+  margin: 3px;
+  width: 24px;
+  height: 24px;
+}
+
+span{
+  margin: 0 3px 0;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 35px;
+  height: 35px;
+}
+
+hr{
+  margin: 10px auto;
+  width: 1000px;
+}
+
+.addques{
+  margin: 5px auto 15px;
+  width: 1000px;
+  background: #C0C0C0;
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px #A9A9A9;
+}
+
+table,th,td{
+  margin: 3px;
+  padding: 3px;
+}
+
+select{
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 35px;
+  width: 300px;
+}
+
+#question-content{
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 5px;
+  height: 30px;
+  width: 600px;
+}
+
+/* 提示文字斜体 */
+::-webkit-input-placeholder { 
+  font-style: italic; 
+}
+input[placeholder="单击新增选项"]::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* radio与checkbox与文字对齐等样式 */
+#radio-disp table .demo-right{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 0px;
+}
+#max-val,#min-val{
+  vertical-align: middle;
+  margin-right: 0;
+}
+
+.add-qn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.add-qn div{
+  display: flex;
+  flex-direction: row;
+  vertical-align: bottom;
+}
+.add-qn div em{
+  margin-top: 25px;
+}
+
+label{
+  vertical-align: middle;
+  margin-top: 15px;
+}
+
+#must-choose{
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-right: 0px;
+  display: inline-block;  
+  width: 20px;  
+  height: 20px;  
+}
+
+/* 不同选项的默认显示 */
+#defaultdisp{
+  display: block;
+}
+
+.textarea-class{
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: none;
+  resize:none;
+  border-radius: 5px;
+  width: 600px;
+}
+
+#number-disp,#radio-disp{
+  display: none;
+}
+
+/* 将单选或多选中的删除按钮显示 */
+#radio-disp tr:hover .input-delbtn{
+  display: inline-block !important;
+}
+
+/* 问题div */
+.question-div{
+  width: 980px;
+  padding: 4px;
+  margin: 5px 0;
+  margin-left: 9px;
+  border-radius: 5px;
+  color: #666;
+}
+
+.question-div label{
+  font-weight: bolder;
+}
+
+.question-div:hover{
+  background: #C0C0C0;
+}
+
+/* 将问题div右侧上移下移删除按钮显示 */
+.question-div:hover>.disp-btn{
+  display: flex !important;
+}
+
+/* 增加的内容容器 */
+.questionnaire{
+  width: 1000px;
+  margin: 5px auto;
+}
+
+/* 各input样式 */
+input[type="button"]{
+  margin-top: -23px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 3px 5px;
+  background: none;
+  border: none;
+}
+
+input[type="number"]{
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 30px;
+  width: 295px;
+}
+
+input[type="button"]:hover{
+  background: whitesmoke;
+  border-radius: 9px;
+}
+
+input[type="button"]:active{
+  transform: scale(0.9,0.9);
+}
+
+input[type="checkbox"]{
+  margin-right: 5px;
+  display: inline-block;  
+  width: 15px;  
+  height: 15px;  
+}
+
+input[type="text"]{
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 30px;
+  width: 578px;
+}
+
+/* 问卷中问题的input样式 */
+.questionnaire .question-div .input-text{
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 750px;
+  height: 25px;
+}
+
+.questionnaire .question-div .input-password{
+  border: 1px solid black;
+  border-radius: 0;
+  box-sizing: border-box;
+  width: 750px;
+  height: 25px;
+}
+
+.questionnaire .question-div .input-number{
+  border: 1px solid black;
+  border-radius: 0;
+  box-sizing: border-box;
+  width: 150px;
+  height: 25px;
+}
+
+.questionnaire .question-div .input-textarea{
+  border: 1px solid black;
+  border-radius: 0;
+  box-sizing: border-box;
+  width: 750px;
+  height: 85px;
+  resize: none;
+}
+
+.questionnaire .question-div .input-radio{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin: 1px 0;
+}
+
+.questionnaire .question-div .label-radio{
+  margin: 1px 5px 1px 0;
+  width: 105px;
+}
+
+.questionnaire .question-div .input-checkbox{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle; 
+  margin: 1px 0;
+}
+
+.questionnaire .question-div .label-checkbox{
+  margin: 1px 25px 1px 0;
+  width: 150px;
+}
+
+/* 单选或多选问题的排列与换行处理 */
+.flex-select{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 750px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* 提示内容与清空问卷 */
+.help-text{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  left: -25px;
+  top: -5px;
+  border-radius: 90%;
+  transition-duration: 0.5s;
+}
+
+.help-text:hover{
+  left: -5px;
+  transform: rotate(360deg);
+  width: 60px;
+  height: 60px;
+}
+
+.questionnaire-title{
+  width: 980px;
+  margin: 5px auto;
+}
+
+#questionnaire-form{
+  border:1px solid #555;
+  border-radius: 15px;
+  box-sizing: border-box;
+  width: 1010px;
+  margin: 5px auto;
+}
+
+#questionnaire-form .questionnaire .question-div:hover{
+  background: none;
+}
+
+.handle-form{
+  margin-left: 53%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.handle-form button{
+  margin: 5px;
+}
+
+.warning-input{
+  box-shadow: 0 0 0 0.1rem #ec2f2f !important;
+}

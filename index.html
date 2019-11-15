@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>问卷管理</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body onkeydown="addKeyboard(event);">
+    <header>
+      <h2>问卷管理 - 问卷设计</h2>
+    </header>
+    <main>
+      <div class="complete">
+        <button title="【Alt+P】" onclick="addContent();"><img alt="save" src="img/save.png"><span>完成问卷</span></button>
+      </div>
+      <hr />
+      <div class="addques">
+        <div id="defaultdisp">
+          <table>
+            <tbody>
+              <tr>
+                <th>问题类型</th>
+                <td>
+                  <select id="ques-type" onchange="selectType();">
+                    <option value="text">文字框（Text）</option>
+                    <option value="password">密码框（Password）</option>
+                    <option value="number">数字框（Number）</option>
+                    <option value="textarea">文字方块（Textarea）</option>
+                    <option value="radio">单选题（Radio）</option>
+                    <option value="checkbox">多选题（Checkbox）</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>题&emsp;&emsp;目</th>
+                <td>
+                  <input id="question-content" placeholder="请输入题目名称" type="text">
+                  <textarea class="textarea-class" placeholder="请输入题目名称" cols="15" rows="5"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="number-disp">
+          <table>
+            <tbody>
+              <tr>
+                <th>最&nbsp;&nbsp;大&nbsp;&nbsp;值</th>
+                <td>
+                  <label for="max-val">
+                    <input type="checkbox" id="max-val" name="isMax">设定最大值
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th> </th>
+                <td>
+                  <input type="number" name="max-value" placeholder="最大数字">
+                </td>
+              </tr>
+              <tr>
+                <th>最&nbsp;&nbsp;小&nbsp;&nbsp;值</th>
+                <td> 
+                  <label for="min-val">
+                    <input type="checkbox" id="min-val" name="isMin">设定最小值
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th> </th>
+                <td>
+                  <input type="number" name="min-value" placeholder="最小数字">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="radio-disp">
+          <table>
+            <tbody>
+              <tr>
+                <th>选&emsp;&emsp;项</th>
+                <td>
+                  <input type="radio" name="radiodemo" class="demo-right">
+                  <input type="text" name="ques-cho" placeholder="请输入选项名称">
+                </td>
+              </tr>
+              <tr>
+                <th> </th>
+                <td>
+                  <input type="radio" disabled name="radiodemo" class="demo-right">
+                  <input type="text" name="add-single" readonly placeholder="单击新增选项" onclick="addRight();">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="add-qn">
+          <label for="must-choose">
+            <input type="checkbox" id="must-choose" name="isMchoose">此题目为必填
+          </label>
+          <div>
+            <em>（快捷键为" <strong>F2</strong> "）</em>
+            <button onclick="addQuestion();"><img alt="pen" src="img/pen.png"><span>新增问题</span></button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <hr />
+    <div class="questionnaire"></div>
+    <img alt="篮球" title="【Alt+C】双击我清空问卷哦 ～ " class="help-text" ondblclick="clearQuestionnaire();" src="img/basketball.png">
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
